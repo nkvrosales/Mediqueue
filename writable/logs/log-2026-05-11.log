@@ -1,0 +1,658 @@
+CRITICAL - 2026-05-11 05:29:57 --> Error: Class "Kint\Renderer\Renderer" not found
+[Method: GET, Route: /]
+in APPPATH/Config/Kint.php on line 38.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(531): [constant expression]()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(498): CodeIgniter\Autoloader\Autoloader->configureKint()
+ 3 SYSTEMPATH/Boot.php(385): CodeIgniter\Autoloader\Autoloader->initializeKint()
+ 4 SYSTEMPATH/Boot.php(160): CodeIgniter\Boot::initializeKint()
+ 5 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+CRITICAL - 2026-05-11 00:32:20 --> TypeError: CodeIgniter\Router\RouteCollection::__construct(): Argument #3 ($routing) must be of type Config\Routing, null given, called in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Config/Services.php on line 622
+[Method: CLI, Route: serve]
+in SYSTEMPATH/Router/RouteCollection.php on line 280.
+ 1 SYSTEMPATH/Config/Services.php(622): CodeIgniter\Router\RouteCollection->__construct()
+ 2 SYSTEMPATH/Config/BaseService.php(325): CodeIgniter\Config\Services::routes()
+ 3 SYSTEMPATH/Config/BaseService.php(264): CodeIgniter\Config\BaseService::__callStatic()
+ 4 SYSTEMPATH/Config/Services.php(619): CodeIgniter\Config\BaseService::getSharedInstance()
+ 5 SYSTEMPATH/Config/BaseService.php(334): CodeIgniter\Config\Services::routes()
+ 6 SYSTEMPATH/Config/BaseService.php(203): CodeIgniter\Config\BaseService::__callStatic()
+ 7 SYSTEMPATH/Common.php(1078): CodeIgniter\Config\BaseService::get()
+ 8 SYSTEMPATH/CLI/Console.php(41): service()
+ 9 SYSTEMPATH/Boot.php(442): CodeIgniter\CLI\Console->run()
+10 SYSTEMPATH/Boot.php(166): CodeIgniter\Boot::runCommand()
+11 ROOTPATH/spark(87): CodeIgniter\Boot::bootSpark()
+ERROR - 2026-05-11 00:47:08 --> Error connecting to the database: mysqli_sql_exception: No such file or directory in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No such file or directory in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:47:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No such file or directory
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 00:49:00 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:49:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 00:49:03 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:49:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 00:50:42 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:50:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 00:52:49 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:52:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 00:52:53 --> Error connecting to the database: mysqli_sql_exception: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Connection refused in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:52:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Connection refused
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 00:58:46 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:58:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 00:58:54 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 00:58:54 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 01:00:56 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'hospital_user'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 01:00:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 01:01:13 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'hospital_user'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 01:01:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 01:01:25 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'hospital_user'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 01:01:25 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
+ERROR - 2026-05-11 01:03:09 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'hospital_user'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:201
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php(201): mysqli->real_connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#13 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#14 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' in /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/MySQLi/Connection.php:231
+Stack trace:
+#0 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect()
+#1 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+#3 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 /home/nkvrosales/Downloads/Antigravity/app/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 /home/nkvrosales/Downloads/Antigravity/app/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+#7 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+#9 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+#10 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+#12 /home/nkvrosales/Downloads/Antigravity/public/index.php(59): CodeIgniter\Boot::bootWeb()
+#13 /home/nkvrosales/Downloads/Antigravity/vendor/codeigniter4/framework/system/rewrite.php(44): require_once('...')
+#14 {main}
+CRITICAL - 2026-05-11 01:03:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost'
+[Method: POST, Route: login]
+in SYSTEMPATH/Database/BaseConnection.php on line 606.
+ 1 SYSTEMPATH/Database/BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH/Database/BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query()
+ 3 SYSTEMPATH/Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH/BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH/Models/UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH/Controllers/Auth.php(23): App\Models\UserModel->authenticate()
+ 7 SYSTEMPATH/CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH/CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController()
+ 9 SYSTEMPATH/CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest()
+10 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+12 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+13 SYSTEMPATH/rewrite.php(44): require_once('/home/nkvrosales/Downloads/Antigravity/public/index.php')
