@@ -1,62 +1,94 @@
-# CodeIgniter 4 Application Starter
+# Mediqueue - Hospital Queue & Ticketing System
 
-## What is CodeIgniter?
+Mediqueue is a modern, web-based queue management and ticketing system designed for hospitals, clinics, and healthcare facilities. It streamlines the patient flow by providing a digital kiosk for ticket generation, a real-time display board for queue monitoring, and a comprehensive management panel for staff and administrators.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## Key Features
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+### 1. Patient Kiosk (Self-Service)
+- **Ticket Generation**: Patients can generate tickets by selecting a department and service.
+- **Priority Support**: Supports normal and priority (e.g., Senior Citizens, PWD, Pregnant) ticketing.
+- **Estimated Wait Time**: Provides real-time feedback on how many people are ahead in the queue.
+- **Patient Information**: Optional name entry for personalized service.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+### 2. Live Display Board
+- **Real-Time Updates**: Automatically refreshes to show the current ticket being served.
+- **Counter Information**: Displays which counter is serving which ticket number.
+- **Waiting List**: Shows a list of upcoming tickets to keep patients informed.
+- **Recent Activity**: Displays recently served tickets for reference.
 
-The user guide corresponding to the latest version of the framework can be found
-[here](https://codeigniter4.github.io/userguide/).
+### 3. Staff Queue Management
+- **Call Next**: Efficiently call the next patient in the queue based on priority.
+- **Recall**: Re-call a patient if they didn't show up initially.
+- **Skip**: Skip a ticket if the patient is unavailable.
+- **Complete**: Mark a patient as served once the consultation/service is finished.
+- **Department Filtering**: Staff can focus on their assigned department.
 
-## Installation & updates
+### 4. Admin Dashboard & Management
+- **Real-Time Stats**: View daily statistics including total tickets, served, skipped, and waiting.
+- **Analytics Charts**: Visual representation of queue volume and service trends.
+- **Department Management**: CRUD operations for hospital departments.
+- **Service Management**: Define specific services offered by each department.
+- **Counter Management**: Configure physical counters/stations.
+- **User Management**: Role-based access control (Admin vs. Staff).
+- **Reports**: Generate and export queue performance reports.
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+##  Technology Stack
+- **Backend**: PHP 8.1+ (CodeIgniter 4.7.2)
+- **Database**: MariaDB / MySQL
+- **Frontend**: Bootstrap 5, jQuery, CSS3
+- **Icons**: FontAwesome 6
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+##  System Functions by Role
 
-## Setup
+### Administrator
+- Full access to the Dashboard and Analytics.
+- Manage all system entities (Users, Departments, Services, Counters).
+- Override and manage any department's queue.
+- Generate system-wide reports.
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+### Staff
+- Access to the Queue Management panel for their assigned department.
+- Call, skip, recall, and complete tickets.
+- View real-time department stats.
 
-## Important Change with index.php
+### Patient (Public)
+- Access the Kiosk to get a ticket.
+- View the Display Board for queue status.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+## Installation & Setup
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd Mediqueue
+   ```
 
-**Please** read the user guide for a better explanation of how CI4 works!
+2. **Install Dependencies**:
+   ```bash
+   composer install
+   ```
 
-## Repository Management
+3. **Environment Setup**:
+   - Copy `env` to `.env`.
+   - Update `database.default.hostname`, `database.default.database`, `database.default.username`, and `database.default.password`.
+   - Set `app.baseURL` to your local development URL.
 
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
+4. **Database Migration & Seeding**:
+   ```bash
+   php spark migrate
+   php spark db:seed MainSeeder
+   ```
 
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
+5. **Run the Application**:
+   ```bash
+   php spark serve
+   ```
 
-## Server Requirements
+## Security
+- CSRF Protection enabled.
+- Role-based access control (RBAC).
+- Password hashing using PHP `password_hash()`.
+- Filter-based authentication for protected routes.
 
-PHP version 7.4 or higher is required, with the following extensions installed:
 
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
 
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
