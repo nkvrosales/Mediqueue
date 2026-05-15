@@ -3,7 +3,7 @@
 Mediqueue is a modern, web-based queue management and ticketing system designed for hospitals, clinics, and healthcare facilities. It streamlines the patient flow by providing a digital kiosk for ticket generation, a real-time display board for queue monitoring, and a comprehensive management panel for staff and administrators.
 
 ## 🚀 Live Demo
-The application is live at: [http://mediqueue.page.gd/](http://mediqueue.page.gd/)
+# The application is live at: [http://mediqueue.page.gd/](http://mediqueue.page.gd/)
 
 ### Default Credentials
 | Role | Username | Password |
