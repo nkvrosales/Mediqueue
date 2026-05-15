@@ -1,0 +1,228 @@
+ERROR - 2026-05-15 00:57:19 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#14 {main}
+CRITICAL - 2026-05-15 00:57:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+AND `is_active` = :is_active:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\verge\\Downloads\\Mediqueue\\Mediqueue\\public\\index.php')
+ERROR - 2026-05-15 00:57:22 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#14 {main}
+CRITICAL - 2026-05-15 00:57:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+AND `is_active` = :is_active:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\verge\\Downloads\\Mediqueue\\Mediqueue\\public\\index.php')
+ERROR - 2026-05-15 00:57:30 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'password')
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'password')
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#14 {main}
+CRITICAL - 2026-05-15 00:57:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+AND `is_active` = :is_active:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'password')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\verge\\Downloads\\Mediqueue\\Mediqueue\\public\\index.php')
+ERROR - 2026-05-15 00:57:36 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:201
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(201): mysqli->real_connect('localhost', '', Object(SensitiveParameterValue), '', 3306, '', 0)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#15 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:231
+Stack trace:
+#0 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(555): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\BaseModel.php(714): CodeIgniter\Model->doFirst()
+#5 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+#6 C:\Users\verge\Downloads\Mediqueue\Mediqueue\app\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+#7 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(951): App\Controllers\Auth->login()
+#8 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(417): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\Users\verge\Downloads\Mediqueue\Mediqueue\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 C:\Users\verge\Downloads\Mediqueue\Mediqueue\vendor\codeigniter4\framework\system\rewrite.php(44): require_once('C:\\Users\\verge\\...')
+#14 {main}
+CRITICAL - 2026-05-15 00:57:36 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+[Method: POST, Route: login]
+in SYSTEMPATH\Database\BaseConnection.php on line 606.
+ 1 SYSTEMPATH\Database\BaseConnection.php(795): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `username` = :username:
+AND `is_active` = :is_active:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(295): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UserModel.php(30): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(23): App\Models\UserModel->authenticate('admin', 'admin')
+ 7 SYSTEMPATH\CodeIgniter.php(951): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\verge\\Downloads\\Mediqueue\\Mediqueue\\public\\index.php')
